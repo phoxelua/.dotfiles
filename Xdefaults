@@ -1,0 +1,43 @@
+!# include "/home/hao/.colors/darkcourses" 
+!# include "/home/hao/.colors/invisibone"
+!# include "/home/hao/.colors/city"
+!# include "/home/hao/.colors/monokai"
+# include "/home/hao/.colors/genius"
+!# include "/home/hao/.colors/jotem"
+!# include "/home/hao/.colors/2z1"
+
+!Basic
+! Partial transparency for a light on dark terminal
+URxvt.background: #000000
+URxvt.foreground: #BBBBBB
+
+URxvt.loginShell: true
+!URxvt.inheritPixmap: true
+!URxvt.tintColor: #FFFFFF
+!URxvt.shading: 7
+!URxvt*background  : #121212
+
+URxvt*internalBorder: 8
+URxvt*externalBorder: 0
+
+
+URxvt*saveLines: 12000
+URxvt*scrollBar: false
+URxvt.cursorBlink: true
+
+! Set fonts
+!URxvt.font     : -*-termsynu-medium-r-normal--14-*-*-*-*-*-*-*
+!URxvt.boldFont : -*-termsynu-bold-r-normal--14-*-*-*-*-*-*-*
+!URxvt*font: xft:DejaVu Sans Mono:pixelsize=12:antialias=true:hinting=true
+!URxvt*boldFont: xft:DejaVu Sans Mono:bold:pixelsize=12:antialias=true:hinting=true
+URxvt*font: xft:Terminess Powerline:size=12:antialias=true:hinting=true
+!URxvt*font: xft: DejaVu Sans Mono for Powerline:size=12
+
+!Enable URL clicking and yanking
+URxvt*perl-lib: /usr/lib/urxvt/perl
+URxvt.perl-ext-common: default,matcher,clipboard
+URxvt.url-launcher: /usr/bin/google-chrome-stable
+URxvt.matcher.button: 1
+URxvt.underlineURLs: true
+URxvt*termName: rxvt-unicode-256color
+URxvt.iso14755: false
