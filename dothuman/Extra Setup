@@ -1,0 +1,34 @@
+More configs
+============
+
+Awesome
+-------
+Files: theme.lua, rc.lua, uselesstile.png. uselesspiral.png
+
+Enabling uselsess gaps:
+	https://github.com/copycat-killer/lain/wiki/Layouts
+	In .config/awesome/themes/multicolor/theme.lua:
+		Add width:
+			theme.useless_gap_width = 10
+
+		Add icons:
+			Create icons and put them in theme icon directory
+			theme.layout_uselesstile = theme.confdir .. "/icons/uselesstile.png"
+			theme.layout_uselesspiral = theme.confdir .. "/icons/uselesspiral.png"
+
+	In rc.lua:
+		Add theme to layout list
+			layouts =
+				{
+				    ...
+				    lain.layout.termfair,
+				    lain.layout.uselesstile,
+				    ...
+				}
+
+
+Slim
+----
+Files: slim.conf, simlock.conf
+
+sudo cp slim.conf and slimlock.conf /etc/

@@ -93,7 +93,7 @@ local layouts = {
 
 -- {{{ Tags
 tags = {
-   names = { "web", "term", "docs", "media", "files", "other" },
+   names = { "web", "docs", "term", "media", "files", "other" },
    layout = { layouts[10], layouts[10], layouts[12], layouts[1], layouts[7], layouts[1] }
 }
 for s = 1, screen.count() do
@@ -770,4 +770,3 @@ end
 
 -- Start nm-applet
 run_once("nm-applet --sm-disable &")
--- awful.util.spawn("pkill nm-applet && nm-applet --sm-disable &")
