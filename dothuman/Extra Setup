@@ -3,21 +3,21 @@ More configs
 
 Awesome
 -------
-Files: theme.lua, rc.lua, uselesstile.png. uselesspiral.png
+- Files: theme.lua, rc.lua, uselesstile.png. uselesspiral.png
 
-Enabling uselsess gaps:
+- Enabling uselsess gaps:
 	https://github.com/copycat-killer/lain/wiki/Layouts
-	In .config/awesome/themes/multicolor/theme.lua:
-		Add width:
-			theme.useless_gap_width = 10
+	- In .config/awesome/themes/multicolor/theme.lua:
+		- Add width:
+			- theme.useless_gap_width = 10
 
-		Add icons:
-			Create icons and put them in theme icon directory
-			theme.layout_uselesstile = theme.confdir .. "/icons/uselesstile.png"
-			theme.layout_uselesspiral = theme.confdir .. "/icons/uselesspiral.png"
+		- Add icons:
+			- Create icons and put them in theme icon directory
+			- theme.layout_uselesstile = theme.confdir .. "/icons/uselesstile.png"
+			- theme.layout_uselesspiral = theme.confdir .. "/icons/uselesspiral.png"
 
-	In rc.lua:
-		Add theme to layout list
+	- In rc.lua:
+		- Add theme to layout list
 			layouts =
 				{
 				    ...
@@ -26,9 +26,55 @@ Enabling uselsess gaps:
 				    ...
 				}
 
+GTK Themes
+----------
+- FIles: gtk-2.0
+- All configuration should be in gtk-2.0, just download dependencies
+			BUT JUST IN CASE
+- Install GUI to manually choose themes
+	- packer -S lxappearance
+- Install necessary packages: gnome-icon-theme, gnome-colors-icon-theme...
+- Run lxappearance to pick themes:
+	Widget: Clearlooks
+	Icon-Theme: Gnome-brave
+	Mouse cursor: Adaiwata
+
+Localtime
+---------
+- change tz: timedatectl set-timezone America/Los_Angeles
+
+Nm-Applet
+---------
+- Files: nm-signal-*.png
+- Install gnome-keyring (MANDATORY)
+- WTF sym links no work...just copy them there manually
+            "/usr/share/icons/gnome-brave/16x16/status/nm-signal-00.png": "dothuman/icons/nm-signal-00.png",
+            "/usr/share/icons/gnome-brave/16x16/status/nm-signal-25.png": "dothuman/icons/nm-signal-25.png",
+            "/usr/share/icons/gnome-brave/16x16/status/nm-signal-50.png": "dothuman/icons/nm-signal-50.png",
+            "/usr/share/icons/gnome-brave/16x16/status/nm-signal-100.png": "dothuman/icons/nm-signal-100.png",
+
+Packer
+------
+- mkdir packer && cd packer
+- sudo pacman -S base-devel fakeroot jshon expac git
+- wget https://aur.archlinux.org/packages/pa/packer/PKGBUILD
+- makepkg
+- sudo pacman -U packer-20140817-1-any.pkg.tar.xz
+- sudo rm -dR packer
+
 
 Slim
 ----
-Files: slim.conf, simlock.conf
+- Files: slim.conf, simlock.conf
+- sudo cp slim.conf and slimlock.conf /etc/
 
-sudo cp slim.conf and slimlock.conf /etc/
+Thunar Automount USB Devices
+-----------------------------
+https://github.com/bling/vim-airline
+- packer -S thunar, gvfs, thunar-volman
+
+Vim Airline
+----------
+- follow instructions on website exactly (both prepatched and non)
+- load Xdefaults to use powerline symbols when '>' symbols dont show up
+
